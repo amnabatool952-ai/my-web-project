@@ -1,0 +1,2 @@
+Cafe Website
+This project is a simple and user-friendly Cafe Website developed using HTML, CSS, and JavaScript. It is designed to provide visitors with information about the cafe, its menu, services, and contact details. The website includes different sections such as Home, Menu, About, and Contact, with an attractive design and easy navigation. HTML is used to create the website structure, CSS is used for styling and layout, and JavaScript is used to add interactive functionality. This project aims to provide a simple and enjoyable browsing experience for users.
