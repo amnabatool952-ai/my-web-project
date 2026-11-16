@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>London Café</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>London Café</h1>
+
+    <!-- Task 8: Dynamic Opening Status -->
+    <p id="status"></p>
+
+    <button id="themeButton">Toggle Light/Dark Mode</button>
+
+    <nav>
+      <a href="#home">Home</a> |
+      <a href="#menu">Menu</a> |
+      <a href="#about">About</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <section id="home">
+    <h2>Welcome to Our Café</h2>
+
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800"
+         alt="Latte art coffee cup"
+         width="400">
+
+    <p>We serve fresh coffee, homemade snacks.</p>
+  </section>
+
+
+  <section id="menu">
+
+    <h2>Our Popular Items</h2>
+
+    <h3>Iced Cofee</h3>
+    <p>Rich espresso with steamed milk foam. A café favorite.</p>
+    <p>Rs. 450</p>
+
+    <h3>Cheese Sandwich</h3>
+    <p>Grilled sandwich with melted cheese and veggies.</p>
+    <p>Rs. 350</p>
+
+    <h3>Chocolate Cake</h3>
+    <p>Soft chocolate cake slice with a hint of vanilla.</p>
+    <p>Rs. 500</p>
+
+
+    <h3>Steps to Order</h3>
+
+    <ol type="A">
+      <li>Choose your item from the menu</li>
+      <li>Fill the order form below</li>
+      <li>Wait for confirmation</li>
+      <li>Enjoy your order</li>
+    </ol>
+
+
+    <h3>Full Menu List</h3>
+
+    <!-- Task 7: Filter Buttons -->
+    <div class="filters">
+      <button class="filter-button" data-category="All">All</button>
+      <button class="filter-button" data-category="Drinks">Drinks</button>
+      <button class="filter-button" data-category="Pastries">Pastries</button>
+    </div>
+
+
+    <!-- Task 4: Interactive Order Total Calculator -->
+    <table border="1">
+
+      <tr>
+        <th>Select</th>
+        <th>Item</th>
+        <th>Category</th>
+        <th>Price</th>
+      </tr>
+
+      <tr class="menu-row" data-category="Drinks">
+        <td>
+          <input type="checkbox" class="menu-item" data-price="450">
+        </td>
+        <td>Iced Cofee</td>
+        <td>Drinks</td>
+        <td>Rs. 450</td>
+      </tr>
+
+      <tr class="menu-row" data-category="Food">
+        <td>
+          <input type="checkbox" class="menu-item" data-price="350">
+        </td>
+        <td>Cheese Sandwich</td>
+        <td>Food</td>
+        <td>Rs. 350</td>
+      </tr>
+
+      <tr class="menu-row" data-category="Pastries">
+        <td>
+          <input type="checkbox" class="menu-item" data-price="500">
+        </td>
+        <td>Chocolate Cake</td>
+        <td>Pastries</td>
+        <td>Rs. 500</td>
+      </tr>
+
+    </table>
+
+    <p id="total">Total: Rs. 0</p>
+
+  </section>
+
+
+  <!-- Task 6: Read More / Read Less -->
+  <section id="about">
+
+    <h2>About Us</h2>
+
+    <article>
+
+      <p>
+        Asic Café opened in 2026 with one simple goal —
+        to serve honest, good quality coffee in a friendly space.
+      </p>
+
+      <p id="extraStory">
+        Our café is a comfortable place where people can enjoy
+        fresh coffee, homemade snacks and spend time with friends
+        and family. We believe that good coffee creates good moments.
+      </p>
+
+      <button id="readMoreButton">Read More</button>
+
+    </article>
+
+    <p>
+      Check our full story on
+      <a href="https://en.wikipedia.org/wiki/Coffeehouse"
+         target="_blank">coffeehouse culture</a>
+      or visit our
+      <a href="#contact">contact page</a> to reach us.
+    </p>
+
+  </section>
+
+
+  <section id="contact">
+
+    <h2>Place an Order / Contact Us</h2>
+
+    <form id="contactForm">
+
+      <!-- Task 1 -->
+      <label for="username">Username:</label><br>
+
+      <input type="text"
+             id="username"
+             name="username"
+             placeholder="Enter your name"
+             required>
+
+      <br><br>
+
+
+      <label for="email">Email:</label><br>
+
+      <input type="email"
+             id="email"
+             name="email"
+             placeholder="Enter your email"
+             required>
+
+      <br><br>
+
+
+      <!-- Task 5: Birth Year -->
+      <label for="birth-year">Birth Year:</label><br>
+
+      <input type="text"
+             id="birth-year"
+             placeholder="e.g. 2002">
+
+      <p id="discount-message"></p>
+
+      <br>
+
+
+      <label>Select Item:</label><br>
+
+      <input type="radio"
+             id="coffee"
+             name="item"
+             value="coffee">
+
+      <label for="coffee">Iced Cofee</label>
+
+
+      <input type="radio"
+             id="sandwich"
+             name="item"
+             value="sandwich">
+
+      <label for="sandwich">Cheese Sandwich</label>
+
+
+      <input type="radio"
+             id="cake"
+             name="item"
+             value="cake">
+
+      <label for="cake">Chocolate Cake</label>
+
+      <br><br>
+
+
+      <label>Add-ons:</label><br>
+
+      <input type="checkbox"
+             id="sugar"
+             name="addon"
+             value="sugar">
+
+      <label for="sugar">Extra Sugar</label>
+
+
+      <input type="checkbox"
+             id="cream"
+             name="addon"
+             value="cream">
+
+      <label for="cream">Extra Cream</label>
+
+      <br><br>
+
+
+      <!-- Task 9: Character Counter -->
+      <label for="special-notes">Special Request:</label><br>
+
+      <textarea id="special-notes"
+                maxlength="100"
+                rows="4"
+                cols="30"
+                placeholder="Any special request?"></textarea>
+
+      <p id="character-count">100 characters remaining</p>
+
+      <br>
+
+
+      <button type="submit">Submit Order</button>
+
+      <!-- Task 1: Personalized Message -->
+      <p id="form-message"></p>
+
+    </form>
+
+  </section>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
